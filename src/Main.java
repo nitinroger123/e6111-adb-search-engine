@@ -17,7 +17,8 @@ public class Main {
 	 * @throws IOException
 	 */
 	public static void displayAndPopulateRelevant(JSONArray results,
-			ArrayList<ResultDocument> relevant) throws JSONException,
+			ArrayList<ResultDocument> relevant,
+			ArrayList<ResultDocument> irRelevant) throws JSONException,
 			IOException {
 		String inp = "";
 		BufferedReader reader = new BufferedReader(new InputStreamReader(
@@ -37,6 +38,11 @@ public class Main {
 				relevant.add(new ResultDocument(1, obj.get("Title").toString(),
 						obj.get("Description").toString(), obj.get("Url")
 								.toString()));
+			} else {
+				irRelevant.add(new ResultDocument(1, obj.get("Title").toString(),
+						obj.get("Description").toString(), obj.get("Url")
+								.toString()));
+
 			}
 		}
 	}
@@ -46,12 +52,13 @@ public class Main {
 		String requestURL = "";
 		query = readQuery();
 		ArrayList<ResultDocument> relevantDocs = new ArrayList<ResultDocument>();
+		ArrayList<ResultDocument> irRelevantDocs = new ArrayList<ResultDocument>();
 		requestURL = BingSearch.getRequestString(query);
 		JSONObject result = BingSearch.getSearchResults(requestURL);
 		JSONArray results = JSONHelper.getJSONArrayFromSearch(result);
-		displayAndPopulateRelevant(results, relevantDocs);
+		displayAndPopulateRelevant(results, relevantDocs, irRelevantDocs);
 		System.out.println(relevantDocs.size());
-		
+
 	}
 
 	private static String readQuery() throws IOException {
