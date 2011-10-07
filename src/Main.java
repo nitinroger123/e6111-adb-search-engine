@@ -41,7 +41,7 @@ public class Main {
 				System.out.println("Title: " + obj.get("Title"));
 				System.out.println("Summary: " + obj.get("Description"));
 			} catch (JSONException exe) {
-				System.out.println("[[[[JSON Exception]]]] occureed - "
+				System.out.println("[[[[JSON Exception]]]] occurred - "
 						+ exe.getMessage());
 			}
 			System.out.println("]");
