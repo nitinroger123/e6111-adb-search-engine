@@ -36,6 +36,10 @@ public class Main {
 			JSONObject obj = results.getJSONObject(i);
 			System.out.println("Result " + i);
 			System.out.println("[");
+			/**
+			 * if the bing results dont bring back all the info,
+			 * just continue and don't crash.
+			 */
 			try {
 				System.out.println("URL: " + obj.get("Url"));
 				System.out.println("Title: " + obj.get("Title"));
@@ -43,6 +47,7 @@ public class Main {
 			} catch (JSONException exe) {
 				System.out.println("[[[[JSON Exception]]]] occurred - "
 						+ exe.getMessage());
+				continue;
 			}
 			System.out.println("]");
 			System.out.print("Relevant (Y/N)?");
@@ -80,10 +85,13 @@ public class Main {
 			}
 			query = query.trim();
 		} catch (Exception e) {
-			System.err.println(" Illegal Arguments " + e.getMessage());
+			System.err.println("Illegal Arguments " + e.getMessage());
 			System.exit(1);
 		}
-
+		
+		/**
+		 * Set a default appId if one is not provided.
+		 */
 		if (appID.equals("")) {
 			appID = "E69E241D81BD12B3CAB2FAC07061D2DA6C00117E";
 		}
