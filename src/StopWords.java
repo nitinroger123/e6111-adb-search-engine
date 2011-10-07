@@ -1,7 +1,12 @@
 
 import java.util.Arrays;
 import java.util.List;
-
+/**
+ * 
+ * List of stop words plus.
+ * Reference: http://armandbrahaj.blog.al/2009/04/14/list-of-english-stop-words/
+ *
+ */
 public class StopWords {
 	public static String stopWords[] = { "a", "about", "above", "above",
 			"across", "after", "afterwards", "again", "against", "all",

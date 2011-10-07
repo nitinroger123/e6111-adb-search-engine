@@ -16,7 +16,6 @@ public class BingSearch {
 	
 	/* The constants required to build the request*/
 	public static final String sources = "Web";
-//	public static final String appId = "E69E241D81BD12B3CAB2FAC07061D2DA6C00117E";
 	public static final String webCount = "10";
 	
 	/**

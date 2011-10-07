@@ -2,7 +2,11 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 
-
+/**
+ * Helper class to populate idf values.
+ * @author nn2270 kt2424
+ *
+ */
 public class IdfHelper {
 	public static HashMap<String, Integer> idfMap = new HashMap<String, Integer>();
 	/**

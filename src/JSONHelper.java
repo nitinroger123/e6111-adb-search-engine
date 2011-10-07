@@ -3,7 +3,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
+/**
+ * Helper class to parse the Json
+ * @author nn2270 and kt2424
+ *
+ */
 public class JSONHelper {
 	
 	/**

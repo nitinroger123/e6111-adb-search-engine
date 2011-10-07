@@ -2,6 +2,12 @@
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 
+ * @author nn2270 and kt2424
+ * Models a Document and stores the map of
+ * if-idf values and weights.
+ */
 public class ResultDocument {
 	
 	HashMap<String, Double> termFrequency;
