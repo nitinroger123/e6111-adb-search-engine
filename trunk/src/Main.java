@@ -12,7 +12,12 @@ import java.util.Map.Entry;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
+/**
+ * 
+ * @author nn2270 and kt2424
+ * The Main class to run
+ *
+ */
 public class Main {
 
 	static Double currentPrecision;
