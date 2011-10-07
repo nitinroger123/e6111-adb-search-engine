@@ -49,6 +49,6 @@ public class StopWords {
 			"whether", "which", "while", "whither", "who", "whoever", "whole",
 			"whom", "whose", "why", "will", "wikipedia", "with", "within", "without",
 			"would", "yet", "you", "your", "yours", "yourself", "yourselves",
-			"the" };
+			"the", "cnet", "facebook" };
 	public static List<String> stopWordsList = Arrays.asList(stopWords);
 }
