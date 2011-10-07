@@ -1,3 +1,4 @@
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -25,11 +26,11 @@ public class BingSearch {
 	 * @return
 	 */
 	public static String getRequestString(String query, String appID) {
+		System.out.println("The query is: "+ query);
 		query = query.replaceAll(" ", "%20");
-		System.out.println(query);
 		String requestString = "http://api.search.live.net/json.aspx?" + "Appid=" + appID + "&query="+query 
 						+ "&sources=" + sources + "&web.count=" + webCount;
-		System.out.println(requestString);
+		System.out.println("Request URL : "+requestString);
 		return requestString;
 	}
 	
