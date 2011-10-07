@@ -74,10 +74,8 @@ public class Main {
 		String query = "";
 		try {
 			appID = args[0];
-			System.out.println(args[0]);
 			precision = Double.parseDouble(args[1]);
 			for (int i = 2; i < args.length; i++) {
-				System.out.println(args[i]);
 				query += args[i] + " ";
 			}
 			query = query.trim();
@@ -102,6 +100,7 @@ public class Main {
 			if (currentPrecision >= precision) {
 				System.out.println("Desired precision reached! With query: "
 						+ query);
+				break;
 			}
 
 			List<String> topQueryWords = getTopQueryWords(relevantDocs, 2);
